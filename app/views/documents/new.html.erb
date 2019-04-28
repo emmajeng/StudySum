@@ -1,0 +1,28 @@
+<%= render 'layouts/navbar' %>
+
+
+
+
+<div class="colorful">
+ <h2>Upload</h2>
+ <% if !@document.errors.empty? %>
+   <div class = "alert alert-error">
+      
+      <ul>
+         <% @document.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+      
+   </div>
+<% end %>
+   <%= form_for @document, html: { multipart: true } do |f| %>
+      <%= f.label :name, :class => "label_style" %><br>
+      <%= f.text_field :name %><br><br>
+      <%= f.label :attachment, :class => "label_style" %><br>
+      <%= f.file_field :attachment %><br><br>
+
+      <%= f.submit "Save", class:  "btn btn-lg btn-primary btn-block" %>
+   <% end %>
+
+</div>

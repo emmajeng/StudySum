@@ -1,0 +1,54 @@
+@import "/*";
+@import "bootstrap";
+@import "tether";
+
+.footer_stick{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  text-align: center;
+  opacity: 1; // Leave this as 1
+  background-color: rgba(0,0,0,0.6);
+  
+}
+
+#primary_nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+body{
+background-image: linear-gradient(to left, #62c8ff, #3ca9f0, #2189de, #2169c9, #3147af);
+ padding-bottom:100px;
+}
+
+
+.style_image {
+  height:200px;
+  width:200px;
+  margin-bottom: 30px;
+}
+
+.colorful{
+  background-color: white !important;
+  border-radius: 25px;
+  padding: 70px; 
+  box-shadow: 5px 8px #888888;
+
+}
+
+
+.logo {
+  height:80px;
+  width:160px;
+  margin-bottom: 30px;
+}
+
+.label_style{
+  font-style: bold;
+}

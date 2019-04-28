@@ -1,0 +1,44 @@
+<%= render 'layouts/navbar' %>
+<br>
+<html>
+  <body>
+  <div class="container">
+       <!-- Services-->
+  <section>
+    <div class="colorful">
+      <h2>Services</h2>
+      <p class="text-muted mb-5">On this web app, you have several different options: </p>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          
+              <%= image_tag asset_path("magicwand.svg"), :class => "style_image" %>        
+
+         
+          <h6>Summarize</h6>
+          <p class="text-muted">Using natural language processing, a technique that allows a machine to interrupt human language, we can summarize your content.</p></p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+       
+        <%= image_tag asset_path("heart.svg"), :class => "style_image" %> 
+       
+          <h6>Save</h6>
+          <p class="text-muted">Keep track of your favourite summaries by creating a profile and saving them.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+         
+          <%= image_tag asset_path("mindmap.png"), :class => "style_image" %> 
+         
+         
+          <h6>Mindmap</h6>
+          <p class="text-muted">Use the summaries you have created to make a mindmap of your biggest terms and words.</p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  </div> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    </body>
+  </html>

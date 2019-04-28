@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  due_date: 2019-03-26 17:34:15
+  worth: MyString
+  result: MyString
+  course_id: 
+
+two:
+  name: MyString
+  due_date: 2019-03-26 17:34:15
+  worth: MyString
+  result: MyString
+  course_id: 

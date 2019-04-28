@@ -1,0 +1,40 @@
+<%= render 'layouts/navbar' %>
+
+<p style="text-align:center" class="notice"><%= notice %></p>
+<p style="text-align:center" class="alert"><%= alert %></p>
+
+<div class="colorful"> 
+<h1 style="text-align:center">Listing Profiles</h1>
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Address</th>
+      <th>Role</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.firstname %></td>
+        <td><%= profile.lastname %></td>
+        <td><%= profile.address %></td>
+        <td><%= profile.user.email %></td>
+        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>
+
+</div>

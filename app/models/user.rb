@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   #the relationship
   has_one :profile
+  # relationship
+  has_many :documents
 end

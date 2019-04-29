@@ -4,8 +4,9 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    
     @profiles = Profile.all
+    redirect_to root_path
+    flash[:error] = "Restricted Area"
   end
 
   # GET /profiles/1
@@ -34,7 +35,7 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
-
+    @profile.user_id = current_user.id
 
     respond_to do |format|
       if @profile.save

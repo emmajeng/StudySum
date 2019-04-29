@@ -22,6 +22,9 @@ gem 'simple_form'
 gem 'popper_js'
 gem 'tether-rails'
 
+# Simple form for association
+gem 'simple_form'
+
 # Devise gem for registration
 gem 'devise'
 

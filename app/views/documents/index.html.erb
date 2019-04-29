@@ -14,6 +14,7 @@
    <thead>
       <tr>
          <th>Name</th>
+         <th>Profile ID</th>
          <th>Download Link</th>
          <th> </th>
       </tr>
@@ -24,6 +25,7 @@
          
          <tr>
             <td><%= document.name %></td>
+            <td><%= document.user_id %></td>
             <td><%= link_to "Download Document", document.attachment_url %></td>
             <td><%= button_to "Delete",  document, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{document.name}?" %></td>
          </tr>

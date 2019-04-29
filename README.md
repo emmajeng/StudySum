@@ -1,4 +1,10 @@
 
+
+This application was built as part of my final year project, and is called StudySum. Made using Rails 5.2 and Ruby 2.4, this application leverages both the devise gem and Postgres to create the infrastructure. 
+The purpose of this application is educational, and intended for the summarisation of notes using natural language processing. Natural language processing is achieved using Python. 
+
+
+
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 

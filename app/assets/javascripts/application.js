@@ -19,3 +19,7 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+  $(".message").delay(1000).fadeOut(3000);
+  

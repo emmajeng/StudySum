@@ -5,6 +5,12 @@ class DocumentsController < ApplicationController
       # temp_user = current_user.id
       # @documents.user_id = temp_user.documents.all
       @documents = Document.where(:user_id => current_user.id)
+      
+      if params[:name]
+         @document = Document.where('name LIKE ?', "%#{params[:name]}%")
+       else
+         @document = Document.all
+      end
 
       
    end
@@ -22,7 +28,6 @@ class DocumentsController < ApplicationController
       else
          render "new"
       end
-      
    end
    
    def destroy

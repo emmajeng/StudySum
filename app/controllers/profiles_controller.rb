@@ -35,7 +35,7 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
-    @profile.user_id = current_user.id
+
 
     respond_to do |format|
       if @profile.save
@@ -83,6 +83,7 @@ class ProfilesController < ApplicationController
     end
   end
 
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
@@ -91,6 +92,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:firstname, :lastname, :address, :role, :user_id)
+      params.require(:profile).permit(:firstname, :lastname, :address, :role, :user_id, :image)
     end
 end

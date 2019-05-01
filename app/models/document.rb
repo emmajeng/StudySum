@@ -4,4 +4,5 @@ class Document < ActiveRecord::Base
    validates :name, presence: true # Make sure the owner's name is present.
    # relationship
    has_one :user
+   
 end

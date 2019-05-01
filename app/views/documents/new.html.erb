@@ -21,8 +21,11 @@
       <%= f.text_field :name %><br><br>
       <%= f.label :attachment, :class => "label_style" %><br>
       <%= f.file_field :attachment %><br>
+      
 
       <%= f.submit "Save", class:  "btn btn-lg btn-primary btn-block" %>
    <% end %>
+   <br>
+   <%= link_to "Back", :back, :class => "btn btn-link" %>
 
 </div>

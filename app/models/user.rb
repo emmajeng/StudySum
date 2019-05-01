@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   has_one :profile
   # relationship
   has_many :documents
+  
 end

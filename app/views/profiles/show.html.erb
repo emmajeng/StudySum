@@ -1,45 +1,26 @@
 <%= render 'layouts/navbar' %>
-
-<p style="text-align:center" class="alert"><%= alert %></p>
-
-<div class="colorful">
-  
-  <h2 style="text-align:center">Profile Details</h2>
-
-<% if @profile.image.attached? %>
-<!-- @post.image.present? will always return true, use attached? to check presence -->
-  <p>
-    <strong>Image:</strong>
-    <br>
-    <!-- resize the image to display it --> 
-    <%= image_tag(@profile.image, height: 200, width: 200) %>
-  </p>
-<% end %>
-
-
-<p>
-  <strong>Firstname:</strong>
-  <%= @profile.firstname %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @profile.lastname %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
+    
+    <div class="colorful">
+      <center><h1>My Profile</h1>
+    <div class="container">
+    <div class="span3 well">
+        <center>
+        <% if @profile.image.attached? %>
+          <!-- @post.image.present? will always return true, use attached? to check presence -->
+            <p>
+             
+              <br>
+              <!-- resize the image to display it --> 
+              <%= image_tag(@profile.image, height: 200, width: 200) %>
+            </p>
+          <% end %>
 
 
-<p>
-  <strong>Email:</strong>
-  <%= @profile.user.email %>
-</p>
-
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
-
-</div>
+        <h3><%= @profile.firstname %> <%= @profile.lastname %></h3><br>
+        <p><strong>Address:</strong> <%= @profile.address %></p>
+        <p><strong>Email:</strong> <%= @profile.user.email %></p>
+		</center>
+    </div>
+   <%= link_to 'Edit', edit_profile_path(@profile) %> |
+   <%= link_to 'Back', profiles_path %>
+</div></div>

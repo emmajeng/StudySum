@@ -1,7 +1,5 @@
 <%= render 'layouts/navbar' %>
 
-
-
 <div class="colorful">
      <h2>Files Uploaded</h2>
     <% if !flash[:notice].blank? %>
@@ -13,8 +11,9 @@
 <table class = "table table-bordered table-striped">
    <thead>
       <tr>
-         <th>Name</th>
-         <th>Download Link</th>
+         <th>Title</th>
+         <th>Description</th>
+         <th> </th>
          <th> </th>
          <th> </th>
       </tr>
@@ -24,16 +23,17 @@
       <% @documents.each do |document| %>
          
          <tr>
-            <td><%= document.name %></td>
-           
-            <td><%= link_to "Download Document", document.attachment_url %></td>
-            <td><%= button_to "Delete",  document, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{document.name}?" %></td>
-            <td><%= button_to "Summarize",  document, method: :delete, class: "btn btn-success", confirm: "Are you sure that you wish to delete #{document.name}?" %></td>
-         </tr>
+            <td><%= document.title %></td>
+            <td><%= document.description %></td>
+            
+             <td><%= link_to 'Show', document %></td>
+             <td><%= link_to 'Edit', edit_document_path(document) %></td>
+             <td><%= link_to 'Delete', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+             </tr>
          
       <% end %>
    </tbody>
    
 </table>
-<%= link_to "New Document", new_document_path, class:  "btn btn-lg btn-primary btn-block"%>
+<%= link_to "New Document", new_document_path, class:  "btn btn-lg btn-primary btn-block" %>
 </div>

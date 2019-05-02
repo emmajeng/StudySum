@@ -1,0 +1,23 @@
+<%= render 'layouts/navbar' %>
+<div class="colorful">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @document.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @document.description %>
+</p>
+
+<p>
+  <strong>Link to download:</strong>
+  <%= link_to 'View File', @document.file, :class => "btn btn-link" %>  
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>
+
+</div>

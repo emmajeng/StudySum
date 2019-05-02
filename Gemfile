@@ -40,6 +40,9 @@ gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Active storage file validator for document
+gem 'activestorage-validator'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

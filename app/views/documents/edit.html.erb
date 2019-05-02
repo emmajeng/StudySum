@@ -1,8 +1,9 @@
 <%= render 'layouts/navbar' %>
 <div class="colorful">
-<h1>New Document</h1>
+<h1>Editing Document</h1>
 
 <%= render 'form', document: @document %>
 
-<%= link_to 'Back', documents_path, :class => "btn btn-link" %>
+<%= link_to 'Show', @document %> |
+<%= link_to 'Back', documents_path %>
 </div>

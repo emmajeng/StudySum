@@ -1,0 +1,40 @@
+<%= render 'layouts/navbar' %>
+
+
+<div class="colorful">
+     <h2>Text Uploaded</h2>
+    <% if !flash[:notice].blank? %>
+   <div class = "alert alert-info">
+      <%= flash[:notice] %>
+   </div>
+<% end %>
+
+<table class = "table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th>Title</th>
+         <th>Body</th>
+         <th> </th>
+         <th> </th>
+         <th> </th>
+      </tr>
+   </thead>
+   
+   <tbody>
+      <% @inputs.each do |input| %>
+         
+         <tr>
+            <td><%= input.title %></td>
+            <td><%= input.body %></td>
+            
+             <td><%= link_to 'Show', input %></td>
+             <td><%= link_to 'Edit', edit_input_path(input) %></td>
+             <td><%= link_to 'Delete', input, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+             </tr>
+         
+      <% end %>
+   </tbody>
+   
+</table>
+<%= link_to "New Input", new_input_path, class:  "btn btn-lg btn-primary btn-block" %>
+</div>

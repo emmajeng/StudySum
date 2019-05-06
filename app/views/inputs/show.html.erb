@@ -1,0 +1,17 @@
+<%= render 'layouts/navbar' %>
+<div class="colorful">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @input.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @input.body %>
+</p>
+
+<%= link_to 'Edit', edit_input_path(@input) %> |
+<%= link_to 'Back', inputs_path %>
+</div>

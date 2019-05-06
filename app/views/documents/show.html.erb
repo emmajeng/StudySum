@@ -13,11 +13,13 @@
 </p>
 
 <p>
-  <strong>Link to download:</strong>
-  <%= link_to 'View File', @document.file, :class => "btn btn-link" %>  
+  <strong>Link to:</strong>
+  <%= link_to 'View', @document.file, :class => "btn btn-link" %>  
 </p>
-
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
+<br>
+<br>
+<%= link_to 'Summarize', documents_path, class: "btn-info" %>
 
 </div>

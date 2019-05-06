@@ -1,0 +1,15 @@
+<div class="form-wrap">
+<%= simple_form_for(@input) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :body, class: "input_body" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class:  "btn btn-lg btn-primary btn-block"  %>
+  </div>
+<% end %>
+</div>

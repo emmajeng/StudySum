@@ -231,6 +231,7 @@ DEPENDENCIES
   gravatar_image_tag!
   jbuilder (~> 2.0)
   jquery-rails
+  nokogiri
   pg
   popper_js
   rails (~> 5.2.2, >= 5.2.2.1)

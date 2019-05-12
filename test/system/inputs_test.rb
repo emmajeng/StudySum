@@ -16,6 +16,7 @@ class InputsTest < ApplicationSystemTestCase
 
     fill_in "Body", with: @input.body
     fill_in "Title", with: @input.title
+    fill_in "Input Type", with: @input.inputType
     click_on "Create Input"
 
     assert_text "Input was successfully created"
@@ -28,6 +29,7 @@ class InputsTest < ApplicationSystemTestCase
 
     fill_in "Body", with: @input.body
     fill_in "Title", with: @input.title
+    fill_in "Input Type", with: @input.inputType
     click_on "Update Input"
 
     assert_text "Input was successfully updated"

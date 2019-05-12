@@ -5,6 +5,7 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
+    <%= f.input :inputType, :collection => %w[URL TEXT], :label => "Type of Input" %>
     <%= f.input :body, class: "input_body" %>
   </div>
 

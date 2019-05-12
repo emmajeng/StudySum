@@ -46,11 +46,20 @@ gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 # Active storage file validator for document
 gem 'activestorage-validator'
 
+gem 'pycall'
+
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara', '>= 2.15'
+  gem 'chromedriver-helper', '1.2.0'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

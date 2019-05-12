@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :summaries
   resources :inputs
   resources :documents
   get 'documents/index'

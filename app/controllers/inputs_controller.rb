@@ -17,8 +17,6 @@ class InputsController < ApplicationController
   def new
     @input = Input.new
     
-    value = %x(python /home/ubuntu/workspace/lib/assets/python/bs4_script.py #{Shellwords.escape(params[:body])}2>&1) 
-    render :text => value
   end
 
   # GET /inputs/1/edit
@@ -77,6 +75,6 @@ class InputsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def input_params
-      params.require(:input).permit(:title, :body)
+      params.require(:input).permit(:title, :body, :inputType)
     end
 end
